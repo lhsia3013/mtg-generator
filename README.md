@@ -1,10 +1,10 @@
-# 🧠 MTG Card Predictor
+# MTG Card Predictor
 
 A machine learning and computer vision research project to generate future themed Magic: The Gathering cards using historical card data, structured rules text, design patterns, and artwork.
 
 ---
 
-## 🎯 Project Goals
+## Project Goals
 
 - Generate **mechanics**, **themes**, and **card types** for future sets  
 - Parse and model MTG **rules text** to classify or generate new cards  
@@ -14,7 +14,7 @@ A machine learning and computer vision research project to generate future theme
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```plaintext
 mtg-predictor/
@@ -32,7 +32,7 @@ mtg-predictor/
 
 ---
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 ### Prerequisites
 
@@ -56,7 +56,7 @@ jupyter notebook
 
 ---
 
-### 🔁 Full Mechanics Extraction Pipeline
+### Full Mechanics Extraction Pipeline
 
 This pipeline transforms Scryfall card data and the official Magic Comprehensive Rules into a machine-learning-ready list of mechanics, each tied to example cards, rule definitions, and mechanic types.
 
@@ -64,13 +64,13 @@ This pipeline transforms Scryfall card data and the official Magic Comprehensive
 
 | Stage | Script | Purpose | Output |
 |-------|--------|---------|--------|
-| 🧱 Download | `download_scryfall_cards.py` | Downloads full Scryfall default_cards set | `scryfall_full_cards.json` |
-| ✂️ Trim | `download_trimmed_scryfall_cards.py` | Extracts only ML-relevant fields from raw Scryfall data | `scryfall_cards_trimmed_for_ml.json` |
-| 🧼 Deduplicate | `deduplicate_trimmed_scryfall_cards.py` | Deduplicates by oracle identity (keeps alt arts/flavor) | `scryfall_cards_deduplicated_for_ml.json` |
+| Download | `download_scryfall_cards.py` | Downloads full Scryfall default_cards set | `scryfall_full_cards.json` |
+| Trim | `download_trimmed_scryfall_cards.py` | Extracts only ML-relevant fields from raw Scryfall data | `scryfall_cards_trimmed_for_ml.json` |
+| Deduplicate | `deduplicate_trimmed_scryfall_cards.py` | Deduplicates by oracle identity (keeps alt arts/flavor) | `scryfall_cards_deduplicated_for_ml.json` |
 
 ---
 
-#### 📘 Rule Parsing
+#### Rule Parsing
 
 &nbsp;
 
@@ -82,7 +82,7 @@ This pipeline transforms Scryfall card data and the official Magic Comprehensive
 
 ---
 
-#### 🧠 Word Extraction
+#### Word Extraction
 
 &nbsp;
 
@@ -93,7 +93,7 @@ This pipeline transforms Scryfall card data and the official Magic Comprehensive
 
 ---
 
-#### 🐛 Manual Fallbacks for Under-Detected Mechanics
+#### Manual Fallbacks for Under-Detected Mechanics
 
 &nbsp;
 
@@ -103,7 +103,7 @@ This pipeline transforms Scryfall card data and the official Magic Comprehensive
 
 ---
 
-#### 🧠 Final Mechanic Generation
+#### Final Mechanic Generation
 
 &nbsp;
 
@@ -113,7 +113,7 @@ This pipeline transforms Scryfall card data and the official Magic Comprehensive
 
 ---
 
-### ▶️ Running the Full Mechanic Extraction Pipeline
+### Running the Full Mechanic Extraction Pipeline
 
 To regenerate all structured rule data and the final `ml_ready_mechanics.json`, run:
 
@@ -123,32 +123,7 @@ cd scripts
 ```
 ---
 
-## 🔮 Next Steps
-
-- 🧱 Refactor and re-run:
-  - `0_parsing_mechanics.ipynb` – now uses clean output
-  - `1_feature_engineering.ipynb` – spans and token match updates
-  - `2_text_embeddings.ipynb` – retrain with clean oracle text inputs
-  - `3_umap_visualization.ipynb` – regenerate UMAPs with mechanic overlays
-
-- 🧠 Train first **multi-label classifier**  
-  → Input: text embeddings  
-  → Output: predicted mechanics
-
-- 🔎 Build **semantic mechanic search** with FAISS  
-  → Input: oracle text  
-  → Output: similar cards / tags
-
-- 🧪 Consider reprocessing **reminder text exclusions**  
-  → Separate embedded rules from "hints" and test impact
-
-- 🧙 Begin early **card generation prototype**  
-  → Condition on themes + predicted mechanics  
-  → Output: name, type, rules text, flavor
-
----
-
-## 🛠️ Git & Dev Notes
+## Git & Dev Notes
 
 ### Gitignore
 
@@ -180,7 +155,7 @@ chmod +x .git/hooks/pre-commit
 
 ---
 
-## 📦 External Data Sources
+## External Data Sources
 
 ### Scryfall Full Card Data
 Scryfall card list and full meta data
@@ -195,7 +170,7 @@ python3 download_scryfall_cards.py
 Used to extract canonical definitions for mechanics reference.
 
 Download manually from the official WOTC page:
-📄 https://magic.wizards.com/en/rules
+https://magic.wizards.com/en/rules
 
 ```bash
 File used: MagicCompRules 20250404.pdf
@@ -214,7 +189,7 @@ curl -O https://mtgjson.com/api/v5/Keywords.json
 
 ---
 
-## 🧪 Optional Enhancements
+## Optional Enhancements
 
 ### Enable `tqdm` in Jupyter
 
@@ -230,7 +205,7 @@ pip install umap-learn seaborn
 
 ---
 
-## 📝 Notebook Execution Notes
+## Notebook Execution Notes
 
 All notebooks are expected to be run from the `notebooks/` directory.  
 If run elsewhere, adjust relative paths (e.g. `../data/processed/`).
