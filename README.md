@@ -56,24 +56,6 @@ jupyter notebook
 
 ---
 
-## ✅ Current Progress
-
-### 📌 Initial Setup & Embedding Pipeline
-
-- ✅ Downloaded card dataset from Scryfall  
-  → `data/processed/scryfall_cards.csv`  
-- ✅ Built `mechanics_full.json` with 20+ structured mechanics  
-- ✅ Parsed `oracle_text` using regex  
-  → `data/processed/parsed_cards.csv`  
-- ✅ Enriched card data with metadata (color, CMC, type, rarity...)  
-  → `data/processed/enriched_cards.csv`  
-- ✅ Embedded `oracle_text` with `all-MiniLM-L6-v2`  
-  → `data/processed/text_embeddings.npy`  
-- ✅ Visualized embeddings with UMAP by metadata clusters  
-  → `visualizations/umap_by_*`
-
----
-
 ### 🔁 Full Mechanics Extraction Pipeline
 
 This pipeline transforms Scryfall card data and the official Magic Comprehensive Rules into a machine-learning-ready list of mechanics, each tied to example cards, rule definitions, and mechanic types.
