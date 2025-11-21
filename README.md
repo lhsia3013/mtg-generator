@@ -10,7 +10,7 @@ A machine learning and computer vision research project to generate future theme
 - Parse and model MTG **rules text** to classify or generate new cards
 - Analyze trends in **set design** (color balance, power creep, mechanic cycles)
 - Match or generate **artwork** aligned with card concepts
-- Combine all components into a prototype **predictive engine**
+- Combine all components into a prototype **card generation engine**
 
 ---
 
