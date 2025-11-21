@@ -1,4 +1,4 @@
-# MTG Card Predictor
+# MTG Card Generator
 
 A machine learning and computer vision research project to generate future themed Magic: The Gathering cards using historical card data, structured rules text, design patterns, and artwork.
 
@@ -6,10 +6,10 @@ A machine learning and computer vision research project to generate future theme
 
 ## Project Goals
 
-- Generate **mechanics**, **themes**, and **card types** for future sets  
-- Parse and model MTG **rules text** to classify or generate new cards  
-- Analyze trends in **set design** (color balance, power creep, mechanic cycles)  
-- Match or generate **artwork** aligned with card concepts  
+- Generate **mechanics**, **themes**, and **card types** for future sets
+- Parse and model MTG **rules text** to classify or generate new cards
+- Analyze trends in **set design** (color balance, power creep, mechanic cycles)
+- Match or generate **artwork** aligned with card concepts
 - Combine all components into a prototype **predictive engine**
 
 ---
@@ -36,9 +36,9 @@ mtg-predictor/
 
 ### Prerequisites
 
-- Python 3.10+
+- `python 3.10+`
 - `pip`
-- `virtualenv` (recommended)
+- `virtualenv` (windows recommended)
 
 ### Installation
 
@@ -172,10 +172,8 @@ Used to extract canonical definitions for mechanics reference.
 Download manually from the official WOTC page:
 https://magic.wizards.com/en/rules
 
-```bash
-File used: MagicCompRules 20250404.pdf
-Place in: data/raw/
-```
+File used: `MagicCompRules 20250404.pdf`
+Place in: `data/raw/`
 
 ### MTGJSON: Keywords.json
 
